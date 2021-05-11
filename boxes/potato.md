@@ -118,4 +118,4 @@ Ok so its a standard login field. Lets try brute forcing.
 
 I initially tried to use THC Hydra, but I couldnt be bothered to mess with the failure response option so I decided to go with burp intruder.
 
-#WIP
+# WIP
