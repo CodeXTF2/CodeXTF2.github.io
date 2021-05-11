@@ -78,4 +78,38 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Ok, so SSH, Web server on 80, and FTP on a weird port. Seems like a standard box. Lets see what the webpage is like.
 
-![web page](potato_img/tcp_80_http_screenshot.png)
+![web page](potato_img/tcp_80_http_screenshot.png)   
+
+Lets gobust the web page.   
+
+```
+/.htaccess (Status: 403) [Size: 280]
+/.htaccess.php (Status: 403) [Size: 280]
+/.htaccess.asp (Status: 403) [Size: 280]
+/.htaccess.aspx (Status: 403) [Size: 280]
+/.htaccess.jsp (Status: 403) [Size: 280]
+/.htaccess.txt (Status: 403) [Size: 280]
+/.htaccess.html (Status: 403) [Size: 280]
+/.hta (Status: 403) [Size: 280]
+/.hta.asp (Status: 403) [Size: 280]
+/.hta.aspx (Status: 403) [Size: 280]
+/.hta.jsp (Status: 403) [Size: 280]
+/.hta.txt (Status: 403) [Size: 280]
+/.hta.html (Status: 403) [Size: 280]
+/.hta.php (Status: 403) [Size: 280]
+/.htpasswd (Status: 403) [Size: 280]
+/.htpasswd.aspx (Status: 403) [Size: 280]
+/.htpasswd.jsp (Status: 403) [Size: 280]
+/.htpasswd.txt (Status: 403) [Size: 280]
+/.htpasswd.html (Status: 403) [Size: 280]
+/.htpasswd.php (Status: 403) [Size: 280]
+/.htpasswd.asp (Status: 403) [Size: 280]
+/admin (Status: 301) [Size: 318]
+/index.php (Status: 200) [Size: 245]
+/index.php (Status: 200) [Size: 245]
+/server-status (Status: 403) [Size: 280]
+```
+
+Ok so it seems like theree is an admin page. Lets have a look.
+
+![web page](potato_img/webpage.png)   
