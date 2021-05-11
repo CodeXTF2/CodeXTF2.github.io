@@ -13,8 +13,8 @@ Name: CodeX
 Number of braincells left: 1  
 Certifications: OSWP, eJPT  
 Currently taking: OSCP  
-Likes: Shells, red teaming, boxes
-Hates: AV, Bugs, Leaving the house
+Likes: Shells, red teaming, boxes  
+Hates: AV, Bugs, Leaving the house  
 
 ### root@codex # cat ./about.txt
 Hi, i'm CodeX, just a kid who has too much time on his hands. I sometimes make random shit like shellcode droppers, keyloggers etc. or do boxes when i'm bored. I also play CTFs
