@@ -113,3 +113,9 @@ Lets gobust the web page.
 Ok so it seems like theree is an admin page. Lets have a look.
 
 ![web page](potato_img/webpage.png)   
+
+Ok so its a standard login field. Lets try brute forcing.
+
+I initially tried to use THC Hydra, but I couldnt be bothered to mess with the failure response option so I decided to go with burp intruder.
+
+#WIP
