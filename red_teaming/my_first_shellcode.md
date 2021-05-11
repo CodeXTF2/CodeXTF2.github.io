@@ -13,3 +13,4 @@ instead, and ask [this guy](https://medium.com/@jonoans) to help me with some of
 were able to get a basic python script that was able to execute shellcode. Here's some of my early shellcode exec code (please dont laugh at me i'll be sad)
 
 
+![Code execution!](./my_first_shellcode_img/image.png)
