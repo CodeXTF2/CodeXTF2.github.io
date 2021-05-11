@@ -1,18 +1,18 @@
 # Welcome to my terminal window!
 ##********************************************************************
-##*                                                                  *
-##* This system is for the use of authorized users only.  Usage of   *
-##* this system may be monitored and recorded by system personnel.   *
-##*                                                                  *
-##* Anyone using this system expressly consents to such monitoring   *
-##* and is advised that if such monitoring reveals possible          *
-##* evidence of criminal activity, system personnel may provide the  *
-##* evidence from such monitoring to law enforcement officials.      *
-##*                                                                  *
-##********************************************************************
-###root@codex # ls
+## *                                                                  *
+## * This system is for the use of authorized users only.  Usage of   *
+## * this system may be monitored and recorded by system personnel.   *
+# #*                                                                  *
+## * Anyone using this system expressly consents to such monitoring   *
+## * and is advised that if such monitoring reveals possible          *
+## * evidence of criminal activity, system personnel may provide the  *
+## * evidence from such monitoring to law enforcement officials.      *
+## *                                                                  *
+## ********************************************************************
+### root@codex # ls
 ###  boxes    code    red_teaming    about
-###root@codex # _
+### root@codex # _
 
 
 
