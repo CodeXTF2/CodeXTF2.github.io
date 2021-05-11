@@ -11,7 +11,7 @@
 
 
 # My first shellcode runner
-(Note: This was done like 2 year2 before this git pages site existed, just putting this here as a test page tbh LOL)
+(Note: This was done like 2 years before this git pages site existed, just putting this here as a test page tbh LOL)
 
 (Note 2: I will not show any future dropper code, in order to preserve their AV detection rates. (I know someone out there is gonna upload to VirusTotal). However, I will provide
 some snapshots of this dropper(?), as it is already no longer FUD and has some major operational problems (as I will discover later) that make it less usable.)
@@ -92,5 +92,5 @@ are much smaller, 1-2MB in size.
 
 
 
-
+# End Of File
 ## -- INSERT --
