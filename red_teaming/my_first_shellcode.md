@@ -49,11 +49,9 @@ Anyways here you go more stolen code:
 ```    def registry_check(self):  
         reg1 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\DriverDesc 2> nul")
         reg2 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\ProviderName 2> nul")       
-        
         if reg1 != 1 and reg2 != 1:    
             print("VMware Registry Detected")
             sys.exit()  
-              
               ...
         def mac_check(self):
             mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
