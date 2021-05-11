@@ -43,7 +43,7 @@ Along the way I ran into an issue where the client thread would sometimesstart b
 
 ## Encryption is good
 Eventually I suspected that those AVs were flagging on heuristics, not based on the signature (since its a custom dropper), since some of them identified it specifically
-to be a Cobalt Strike beacon, and when I used a calc payload a lot of the detections dissappeared. So I stole even more code from github because im a scrub.
+to be a Cobalt Strike beacon, and when I used a calc payload a lot of the detections dissappeared. So I stole even more code from github because im a scrub.  
 Anyways here you go more stolen code:
 
 ```
