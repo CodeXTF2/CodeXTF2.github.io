@@ -110,7 +110,7 @@ Lets gobust the web page.
 /server-status (Status: 403) [Size: 280]
 ```
 
-Ok so it seems like theree is an admin page. Lets have a look.
+Ok so it seems like there is an admin page. Lets have a look.
 
 ![web page](potato_img/webpage.png)   
 
