@@ -1,4 +1,4 @@
-#My first shellcode runner
+# My first shellcode runner
 (Note: This was done like 2 year2 before this git pages site existed, just putting this here as a test page tbh LOL)
 
 (Note 2: I will not show any future dropper code, in order to preserve their AV detection rates. (I know someone out there is gonna upload to VirusTotal). However, I will provide
