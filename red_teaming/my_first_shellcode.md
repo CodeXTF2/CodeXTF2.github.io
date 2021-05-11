@@ -26,7 +26,7 @@ used ctypes in python to execute shellcode.
 Of course, since i'm pretty sure AV vendors spend all day browsing github for new shellcode runners to ruin, this code got caught too. So I had to steal some code from it
 instead, and ask [this guy](https://medium.com/@jonoans) to help me with some of the remaining code because I could barely read ctypes or C at the time (He did most of the thinking tbh). Eventually, we were able to get a basic python script that was able to execute shellcode. Here's some of my early shellcode exec code (please dont laugh at me i'll be sad)
 
-![Code execution!](./my_first_shellcode_img/image.png)
+![Code execution!](./my_first_shellcode_img/image.png)  
 (You can already see why I dont mind showing the code for this lol)
 
 Ok, so this is the most basic shellcode exec I could think of. The classic VirtualAlloc, RtlMoveMemory, CreateThread combo. This actually got pretty good results against
