@@ -4,13 +4,53 @@
 (Note 2: I will not show any future dropper code, in order to preserve their AV detection rates. (I know someone out there is gonna upload to VirusTotal). However, I will provide
 some snapshots of this dropper(?), as it is already no longer FUD and has some major operational problems (as I will discover later) that make it less usable.)
 
+## Windows defender makes me sad
 One day, my cobalt strike beacons started getting caught by windows defender more than usual (guess default artifact kit pipe bypass won't work forever) so I decided
 to make my own shellcode loader. Back then I only knew python, because I was a script kiddie (and still am) so I went and stole the first python shellcode runner I could
 find on github. I cant find that original git repo anymore, but it essentially used ctypes in python to execute shellcode. 
 
+##Code Execution!
 Of course, since i'm pretty sure AV vendors spend all day browsing github for new shellcode runners to ruin, this code got caught too. So I had to steal some code from it
-instead, and ask [this guy](https://medium.com/@jonoans) to help me with some of the remaining code because I could barely read ctypes or C at the time. Eventually, we
-were able to get a basic python script that was able to execute shellcode. Here's some of my early shellcode exec code (please dont laugh at me i'll be sad)
-
+instead, and ask [this guy](https://medium.com/@jonoans) to help me with some of the remaining code because I could barely read ctypes or C at the time (He did most of the thinking tbh). Eventually, we were able to get a basic python script that was able to execute shellcode. Here's some of my early shellcode exec code (please dont laugh at me i'll be sad)
 
 ![Code execution!](./my_first_shellcode_img/image.png)
+(You can already see why I dont mind showing the code for this lol)
+
+Ok, so this is the most basic shellcode exec I could think of. The classic VirtualAlloc, RtlMoveMemory, CreateThread combo. This actually got pretty good results against
+AV, as you can see here.
+
+![wew AV go brr](./my_first_shellcode_img/image2.png)
+
+Ok, 4 detections isnt horrible. It would be usable against a target as long as they arent using any of these 4 AVs. But I got concerned about the VirtualAlloc RtlMoveMemory
+CreateThread combo getting flagged, so I stole an idea from Cobalt Strike's artifact kit bypasses, and tried implementing a named pipe shellcode exec technique.
+
+![more code](./my_first_shellcode_img/image3.png)
+
+Along the way I ran into an issue where the client thread would sometimesstart before the server thread, leading to issues with the named pipe. (Do you know how annoying is it to debug code that WORKS HALF THE TIME?) This was eventually fixed by making the client run only after the server has started. Then I went and scanned it on antiscan and realised this technique somehow had a 6/26 detection ratio, somehow higher than before. sAd.
+
+##Encryption is good
+Eventually I suspected that those AVs were flagging on heuristics, not based on the signature (since its a custom dropper), since some of them identified it specifically
+to be a Cobalt Strike beacon, and when I used a calc payload a lot of the detections dissappeared. So I stole even more code from github because im a scrub.
+Anyways here you go more stolen code:
+
+```    def registry_check(self):  
+        reg1 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\DriverDesc 2> nul")
+        reg2 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\ProviderName 2> nul")       
+        
+        if reg1 != 1 and reg2 != 1:    
+            print("VMware Registry Detected")
+            sys.exit()  
+              
+              ...
+        def mac_check(self):
+            mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
+            vmware_mac_list = ["00:05:69", "00:0c:29", "00:1c:14", "00:50:56"]
+            if mac_address[:8] in vmware_mac_list:
+                print("VMware MAC Address Detected")
+                sys.exit()
+```
+Code from [https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py](https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py)
+![antivm]()
+
+Aaaand it increased my detections. I guess AVs really dont like me checking if i'm in a VM. I wonder why that could be...
+
