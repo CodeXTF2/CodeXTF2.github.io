@@ -9,12 +9,12 @@
 ### about.txt bio.txt other_people.txt
 ### root@codex # cat ./bio.txt
 
-Name: CodeX
-Number of braincells left: 1
-Certifications: OSWP, eJPT
-Currently taking: OSCP
-Certifications: OSWP, eJPT
-In Progress: OSCP
+Name: CodeX  
+Number of braincells left: 1  
+Certifications: OSWP, eJPT  
+Currently taking: OSCP  
+Certifications: OSWP, eJPT  
+In Progress: OSCP  
 
 ### root@codex # cat ./about.txt
 Hi, i'm CodeX, just a kid who has too much time on his hands. I sometimes make random shit like shellcode droppers, keyloggers etc. or do boxes when i'm bored. I also play CTFs
@@ -25,8 +25,8 @@ for now. Feel free to look around my box!
 ~ CodeX
 ### root@codex # cat ./other_people.txt
 Check out my friends' stuff:  
-X3ron: [https://medium.com/@X3ron](https://medium.com/@X3ron)  
-Jonathan: [https://medium.com/@jonoans](https://medium.com/@jonoans)
+X3ron: [Medium](https://medium.com/@X3ron) [Github](https://github.com/incursi0n)
+Jonathan: [Medium](https://medium.com/@jonoans) [Github](https://github.com/Jonoans)
 
 
 
