@@ -7,7 +7,7 @@
 ### root@codex # cd ./red_teaming
 ### root@codex # ls
 ### [../](../) [my_first_shellcode.md](red_teaming/my_first_shellcode.md)
-### root@codex # _
+### root@codex # vi my_first_shellcode.md
 
 
 # My first shellcode runner
