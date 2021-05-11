@@ -15,7 +15,7 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
-<a href="./test1">Go to next page</a>
+[test](./test1)
 
 - Bulleted
 - List
