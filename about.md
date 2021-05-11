@@ -24,8 +24,8 @@ for now. Feel free to look around my box!
 
 ~ CodeX
 ### root@codex # cat ./other_people.txt
-Check out my friends' stuff:
-X3ron: [https://medium.com/@X3ron](https://medium.com/@X3ron)
+Check out my friends' stuff:  
+X3ron: [https://medium.com/@X3ron](https://medium.com/@X3ron)  
 Jonathan: [https://medium.com/@jonoans](https://medium.com/@jonoans)
 
 
