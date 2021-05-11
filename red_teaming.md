@@ -6,5 +6,5 @@
 ### [boxes](./boxes.md) [code](./code.md) [red_teaming](./red_teaming.md) [CTF](./ctf.md) [about](./about.md)
 ### root@codex # cd ./red_teaming
 ### root@codex # ls
-### [../](../) [my_first_shellcode.md](./my_first_shellcode.md)
+### [../](../) [my_first_shellcode.md](./red_teaming/my_first_shellcode.md)
 ### root@codex # _
