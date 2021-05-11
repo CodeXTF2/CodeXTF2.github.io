@@ -41,7 +41,7 @@ CreateThread combo getting flagged, so I stole an idea from Cobalt Strike's arti
 
 Along the way I ran into an issue where the client thread would sometimesstart before the server thread, leading to issues with the named pipe. (Do you know how annoying is it to debug code that WORKS HALF THE TIME?) This was eventually fixed by making the client run only after the server has started. Then I went and scanned it on antiscan and realised this technique somehow had a 6/26 detection ratio, somehow higher than before. sAd.
 
-## Encryption is good
+## Anti-VM done wrong
 Eventually I suspected that those AVs were flagging on heuristics, not based on the signature (since its a custom dropper), since some of them identified it specifically
 to be a Cobalt Strike beacon, and when I used a calc payload a lot of the detections dissappeared. So I stole even more code from github because im a scrub.  
 Anyways here you go more stolen code:
@@ -64,6 +64,8 @@ def mac_check(self):
 Code from [https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py](https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py)
 
 Aaaand it increased my detections. I guess AVs really dont like me checking if i'm in a VM. I wonder why that could be...
+
+## Encryption is good
 
 Oh wait they might be flagging me on the huge default Cobalt Strike generated beacon shellcode blob in the middle of my binary. I wonder what will happen if I encrypt that
 blob and decrypt it at runtime...
