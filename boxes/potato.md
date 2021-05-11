@@ -78,4 +78,4 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Ok, so SSH, Web server on 80, and FTP on a weird port. Seems like a standard box. Lets see what the webpage is like.
 
-![web page](boxes/potato_img/tcp_80_http_screenshot.png)
+![web page](potato_img/tcp_80_http_screenshot.png)
