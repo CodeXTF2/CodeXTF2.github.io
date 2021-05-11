@@ -13,8 +13,9 @@
 # Potato
 
 Started doing this box late at night with Jonathan and X3ron because I clearly have no life.  
-  
-Initial nmap  
+ 
+## Recon
+### Initial nmap  
 ```
 # Nmap 7.91 scan initiated Mon May 10 10:04:03 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/Desktop/Labs/ProvingGrounds/Potato/results/192.168.124.101/scans/_full_tcp_nmap.txt -oX /root/Desktop/Labs/ProvingGrounds/Potato/results/192.168.124.101/scans/xml/_full_tcp_nmap.xml 192.168.124.101
 Increasing send delay for 192.168.124.101 from 0 to 5 due to 706 out of 2351 dropped probes since last increase.
@@ -82,6 +83,7 @@ Ok, so SSH, Web server on 80, and FTP on a weird port. Seems like a standard box
 
 Lets gobust the web page.   
 
+### Gobuster
 ```
 /.htaccess (Status: 403) [Size: 280]
 /.htaccess.php (Status: 403) [Size: 280]
