@@ -25,8 +25,8 @@ for now. Feel free to look around my box!
 ~ CodeX
 ### root@codex # cat ./other_people.txt
 Check out my friends' stuff:  
-X3ron: [Medium](https://medium.com/@X3ron) [Github](https://github.com/incursi0n)
-Jonathan: [Medium](https://medium.com/@jonoans) [Github](https://github.com/Jonoans)
+X3ron: [Medium](https://medium.com/@X3ron) [Github](https://github.com/incursi0n)  
+Jonathan: [Medium](https://medium.com/@jonoans) [Github](https://github.com/Jonoans)  
 
 
 
