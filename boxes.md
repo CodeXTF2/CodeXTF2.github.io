@@ -6,8 +6,9 @@
 ### *                                                                  *
 ### *          Other than that, feel free to look around!              *
 ### ********************************************************************
-### root@codex # pwd
-### /root/boxes
+### root@codex # ls
+### [boxes](./boxes.md)    [code](./code.md)    [red_teaming](./red_teaming.md)    [about](./about.md)
+### root@codex # cd ./boxes
 ### root@codex # ls
 ### [box1](./box1.md)
 ### root@codex # _
