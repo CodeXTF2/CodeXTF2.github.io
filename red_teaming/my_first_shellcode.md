@@ -50,7 +50,6 @@ Anyways here you go more stolen code:
                 sys.exit()
 ```
 Code from [https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py](https://github.com/PushpenderIndia/crypter/blob/master/BypassVM.py)
-![antivm]()
 
 Aaaand it increased my detections. I guess AVs really dont like me checking if i'm in a VM. I wonder why that could be...
 
