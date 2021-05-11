@@ -7,4 +7,5 @@
 ### root@codex # cd ./boxes
 ### root@codex # ls
 ### [../](../)
+### [Potato](boxes/potato.md)
 ### root@codex # _
