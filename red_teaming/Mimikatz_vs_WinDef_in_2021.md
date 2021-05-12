@@ -19,13 +19,13 @@ a few methods, such as:
   
 ### Invoke-Mimikatz.ps1
   
-[This](https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1) powershell version method worked for a while, especially when Invoke-Obfuscation was newly released and working very well. However, over time, it started getting caught
+[This](https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1) powershell version worked for a while, especially when Invoke-Obfuscation was newly released and working very well. However, over time, it started getting caught
 at runtime and eventually caught on disk. Also, powershell logging would likely catch this, since unmanaged powershell is no longer as effective (at least in its default 
 configuration from github).
 
 ### Reflectively loading mimikatz
   
-I haven't actually tried this myself so far, due to the next method being my previously preferred method of mimikatz usage, but I have heard from friends that you can
+I haven't actually tried this myself so far, due to the next method being my previously preferred method of mimikatz usage, but I have heard from friends over at [Infosec Prep](https://discord.gg/FBnEgHmce6) that you can
 reflectively inject mimikatz and it will actually run, but then the powershell process will get flagged and killed shortly after. Still works though, but not so stealthy
 if there's anyone watching alerts over at the blue team...
 
