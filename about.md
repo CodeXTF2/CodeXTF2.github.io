@@ -17,8 +17,8 @@ Likes: Shells, red teaming, boxes
 Hates: AV, Bugs, Leaving the house  
 
 ### root@codex # cat ./about.txt
-Hi, i'm CodeX, just a kid who has too much time on his hands. I sometimes make random shit like shellcode droppers, keyloggers etc. or do boxes when i'm bored. I also play CTFs
-with friends (surprised I have any). I made this git pages site just to put CTF solutions etc (sometimes bonus points are given for doing it) and occasionally some other
+Hi, i'm CodeX, just a kid who has too much time on his hands. I like to make offensive stuff e.g. droppers, keyloggers, C2 infra etc. Or do boxes when i'm bored. I also play 
+CTFs with friends (surprised I have any). I made this git pages site just to put CTF solutions etc (sometimes bonus points are given for doing it) and occasionally some other
 stuff my remaining braincell finds interesting. I would post HTB box solutions but I cant be bothered to remove active boxes from the site, so i'll stick to VulnHub boxes
 for now. Feel free to look around my box!
 
