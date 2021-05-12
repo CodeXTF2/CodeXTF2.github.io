@@ -174,8 +174,8 @@ if($_GET['login']==="1"){
 ```
 
 This looks like it could be the [php strcmp vulnerability](https://www.doyler.net/security-not-included/bypassing-php-strcmp-abctf2016). Lets give it a shot.  
-
-Now, back into burp, lets intercept the request and pass an array as the password variable.  
+This vuln seems to work becuase if you compare an array with a string in php, it returns null. And since == was used instead of ===, type checking isnt in place. So
+null == 0 returns true. Now, back into burp, lets intercept the request and pass an array as the password variable.  
   
 Oh nice it lets us into the admin page!  Lets have a look around.
 
