@@ -28,5 +28,7 @@ Check out my friends' stuff:
 X3ron: [Medium](https://medium.com/@X3ron) [Github](https://github.com/incursi0n)  
 Jonathan: [Medium](https://medium.com/@jonoans) [Github](https://github.com/Jonoans)  
 
+Also these big brain people over at [Infosec Prep](https://discord.gg/FBnEgHmce6)
+
 
 
