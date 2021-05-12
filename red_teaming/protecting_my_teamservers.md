@@ -10,7 +10,7 @@
   
 # Protecting my C2 infrastructure from annoying scanner monkeys (and some pesky AV vendors)
   
- ## Why do I need to protect my C2 infra?
+## Why do I need to protect my C2 infra?
  Because scanner monkeys (and sometimes pesky security vendors) like to scan the internet for certain C2 signatures e.g. Cobalt Strike teamservers and profile them. One such 
  example is [these people](https://blog.fox-it.com/2019/02/26/identifying-cobalt-strike-team-servers-in-the-wild/) who went and started fingerprinting Cobalt Strike teamservers
  using an anomalous space in NanoHTTPD. Or the time I woke up to this monstrosity:  
@@ -28,10 +28,17 @@ Arch : x64, @CodeX
 Which according to [this blackhat article](https://www.blackhat.com/docs/us-17/thursday/us-17-Kotler-The-Adventures-Of-Av-And-The-Leaky-Sandbox-wp.pdf) is Comodo messing
 with my beacons >:C
   
-So the first thing I did was disable payload staging. According to [the official Cobalt Strike documentation](https://www.cobaltstrike.com/help-malleable-c2), this can be done by setting host_stage to false.
-I know, not being able to stage an entire beacon in a 12kb binary is a little bit sad, but at least AV vendors arent able to instantly get a copy of my artifacts, and
+## Securing my teamservers
+  
+  
+### Disable Payload staging
+So the first thing I did was disable payload staging. Since anyone can easily use this feature to grab a copy of your artifacts, payload staging can be an OPSEC concern.
+According to [the official Cobalt Strike documentation](https://www.cobaltstrike.com/help-malleable-c2), this can be done by setting host_stage to false. I know, not being able to stage an
+entire beacon in a 12kb binary is a little bit sad, but at least AV vendors arent able to instantly get a copy of my artifacts, and
 building detections for my artifact kit profiles. But then, theres also another way of detecting team servers: by logging in normally  
   
+  
+### SSH Tunneling
 This is the response when you try to login to a non Cobalt Strike server with the Cobalt Strike client:  
  ![sad](./protecting_my_teamservers_img/conn_failed.png)
    
