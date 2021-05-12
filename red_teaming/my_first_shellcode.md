@@ -5,7 +5,7 @@
 ### root@codex # ls
 ### boxes code red_teaming CTF about
 ### root@codex # cd ./red_teaming
-[Go up 1 directory](../boxes.md)
+[Go up 1 directory](../red_teaming.md)
 ### root@codex # vi my_first_shellcode.md
 
 
