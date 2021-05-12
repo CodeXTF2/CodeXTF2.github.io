@@ -52,5 +52,5 @@ But this is what you get if you try logging into a real teamserver with an incor
  ssh user@my.ip.here -L 50050:127.0.0.1:50050
  ```
    
- And now I can login as normal with the Cobalt Strike client!
-  
+ And now I can login as normal with the Cobalt Strike client!  
+  ![sad](./protecting_my_teamservers_img/connected.png)
