@@ -5,6 +5,7 @@
 ### root@codex # ls
 ### boxes code red_teaming CTF about
 ### root@codex # cd ./red_teaming
+[Go up 1 directory](../red_teaming.md)
 ### root@codex # vi Mimikatz_vs_WinDef_in_2021
   
 # Running Mimikatz without making Windows Defender angry (in 2021)
