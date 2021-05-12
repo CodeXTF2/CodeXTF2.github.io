@@ -32,10 +32,10 @@ So the first thing I did was disable payload staging. According to [the official
 I know, not being able to stage an entire beacon in a 12kb binary is a little bit sad, but at least AV vendors arent able to instantly get a copy of my artifacts, and
 building detections for my artifact kit profiles. But then, theres also another way of detecting team servers: by logging in normally  
   
-This is the response when you try to login to a non Cobalt Strike server with the Cobalt Strike client:
+This is the response when you try to login to a non Cobalt Strike server with the Cobalt Strike client:  
  ![sad](./protecting_my_teamservers_img/conn_failed.png)
    
-But this is what you get if you try logging into a real teamserver with an incorrect password:
+But this is what you get if you try logging into a real teamserver with an incorrect password:  
  ![sad](./protecting_my_teamservers_img/wrong_pass.png)
    
  I'm not entirely sure how efficient it would be to fingerprint teamservers this way, but I dont want ANYBODY trying to fingerprint my box as a Cobalt Strike teamserver
