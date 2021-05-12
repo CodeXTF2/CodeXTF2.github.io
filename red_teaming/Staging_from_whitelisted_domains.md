@@ -5,8 +5,6 @@
 ### root@codex # ls
 ### [boxes](./boxes.md) [code](./code.md) [red_teaming](./red_teaming.md) [CTF](./ctf.md) [about](./about.md)
 ### root@codex # cd ./red_teaming
-### root@codex # ls
-### [../](../) [Staging_from_whitelisted_domains.md](red_teaming/Staging_from_whitelisted_domains.md)
 ### root@codex # vi my_first_shellcode.md
   
 # Staging from whitelisted domains
