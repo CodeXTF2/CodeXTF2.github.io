@@ -14,7 +14,7 @@ Number of braincells left: 1
 Certifications: OSWP, eJPT  
 Currently taking: OSCP  
 Likes: Shells, red teaming, boxes  
-Hates: AV, Bugs, Leaving the house  
+Hates: AV, bugs (both code and IRL), leaving the house  
 
 ### root@codex # cat ./about.txt
 Hi, i'm CodeX, just a kid who has too much time on his hands. I like to make offensive stuff e.g. droppers, keyloggers, C2 infra etc. Or do boxes when i'm bored. I also play 
