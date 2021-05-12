@@ -35,7 +35,7 @@ The most simple way to prevent random stuff from getting to my teamserver was to
   
 ### Disable Payload staging
 So the first thing I did was disable payload staging. Since anyone can easily use this feature to grab a copy of your artifacts, payload staging can be an OPSEC concern.
-According to [the official Cobalt Strike documentation](https://www.cobaltstrike.com/help-malleable-c2), this can be done by setting host_stage to false. I know, not being able to stage an
+According to [the official Cobalt Strike documentation](https://www.cobaltstrike.com/help-malleable-c2), this can be done by setting host_stage to false in the Malleable C2 profile. I know, not being able to stage an
 entire beacon in a 12kb binary is a little bit sad, but at least AV vendors arent able to instantly get a copy of my artifacts, and
 building detections for my artifact kit profiles. But then, theres also another way of detecting team servers: by logging in normally  
   
