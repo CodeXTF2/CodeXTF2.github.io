@@ -112,12 +112,97 @@ Lets gobust the web page.
 /server-status (Status: 403) [Size: 280]
 ```
 
-Ok so it seems like there is an admin page. Lets have a look.
+Ok so it seems like there is an admin page. Lets have a look.  
 
-![web page](potato_img/webpage.png)   
+![web page](potato_img/webpage.png)     
 
-Ok so its a standard login field. Lets try brute forcing.
+Lets gobust the /admin directory and see if we find anything.  
 
-I initially tried to use THC Hydra, but I couldnt be bothered to mess with the failure response option so I decided to go with burp intruder.
+Oh nice, /logs seems interesting.  
+As you can see, it shows the username is admin.  Lets try brute forcing.  
+I initially tried to use THC Hydra, but I couldnt be bothered to mess with the failure response option so I decided to go with burp intruder.  
+
+
+Unfortunately, the brute force didn't work :(
+
+Lets go back to the scan results.
+
+```
+2112/tcp open  ftp     syn-ack ttl 63 ProFTPD
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--   1 ftp      ftp           901 Aug  2  2020 index.php.bak
+|_-rw-r--r--   1 ftp      ftp            54 Aug  2  2020 welcome.msg
+```
+
+Oh yeah we have FTP with some stuff inside. Lets have a look.
+
+index.php.bak looks like a backup of the login page php code. Lets have a look.  
+
+```
+<html>
+<head></head>
+<body>
+
+<?php
+
+$pass= "potato"; //note Change this password regularly
+
+if($_GET['login']==="1"){
+  if (strcmp($_POST['username'], "admin") == 0  && strcmp($_POST['password'], $pass) == 0) {
+    echo "Welcome! </br> Go to the <a href=\"dashboard.php\">dashboard</a>";
+    setcookie('pass', $pass, time() + 365*24*3600);
+  }else{
+    echo "<p>Bad login/password! </br> Return to the <a href=\"index.php\">login page</a> <p>";
+  }
+  exit();
+}
+?>
+
+
+  <form action="index.php?login=1" method="POST">
+                <h1>Login</h1>
+                <label><b>User:</b></label>
+                <input type="text" name="username" required>
+                </br>
+                <label><b>Password:</b></label>
+                <input type="password" name="password" required>
+                </br>
+                <input type="submit" id='submit' value='Login' >
+  </form>
+</body>
+</html>
+```
+
+This looks like it could be the [php strcmp vulnerability](https://www.doyler.net/security-not-included/bypassing-php-strcmp-abctf2016). Lets give it a shot.  
+
+Now, back into burp, lets intercept the request and pass an array as the password variable.  
+  
+Oh nice it lets us into the admin page!  Lets have a look around.
+
+The ping page doesnt seem to accept user input, ive tried passing them as variables in the url with no success. So the standard ping command injection wont work here.
+
+However, in the logs section, it seems to pass a file name as a POST param. Lets see if we can LFI...
+
+It works! And there seems to be a hash stored in /etc/passwd... Lets crack it!  
+  
+```
+[root@kali]-[192.168.61.138]-[loot] # john hashes.txt 
+Warning: detected hash type "md5crypt", but the string is also recognized as "md5crypt-long"
+Use the "--format=md5crypt-long" option to force loading these as that type instead
+Using default input encoding: UTF-8
+Loaded 1 password hash (md5crypt, crypt(3) $1$ (and variants) [MD5 128/128 AVX 4x3])
+Will run 4 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst, rules:Wordlist
+dragon           (?)
+1g 0:00:00:00 DONE 2/3 (2021-05-12 01:24) 50.00g/s 9600p/s 9600c/s 9600C/s 123456..knight
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+```
+  
+It seems to have cracked. Now we have a password "dragon" for the user "webadmin". Lets SSH in!
+
 
 # WIP
