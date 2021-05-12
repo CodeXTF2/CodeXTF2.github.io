@@ -7,7 +7,7 @@
 ### root@codex # cd ./red_teaming
 ### root@codex # ls
 ### [../](../)  
+### [Mimikatz_vs_WinDef_in_2021](red_teaming/Mimikatz_vs_WinDef_in_2021.md)  
 ### [my_first_shellcode.md](red_teaming/my_first_shellcode.md)  
-### [Protecting_my_teamservers](red_teaming/protecting_my_teamservers.md)
-### [Mimikatz_vs_WinDef_in_2021](red_teaming/Mimikatz_vs_WinDef_in_2021.md)
-### root@codex # _
+### [Protecting_my_teamservers](red_teaming/protecting_my_teamservers.md)  
+### root@codex # _  
