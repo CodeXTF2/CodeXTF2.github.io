@@ -38,7 +38,7 @@ CreateThread combo getting flagged, so I stole an idea from Cobalt Strike's arti
 
 ![more code](./my_first_shellcode_img/image3.png)
 
-Along the way I ran into an issue where the client thread would sometimesstart before the server thread, leading to issues with the named pipe. (Do you know how annoying is it to debug code that WORKS HALF THE TIME?) This was eventually fixed by making the client run only after the server has started. Then I went and scanned it on antiscan and realised this technique somehow had a 6/26 detection ratio, somehow higher than before. sAd.
+Along the way I ran into an issue where the client thread would sometimes start before the server thread, leading to issues with the named pipe. (Do you know how annoying is it to debug code that WORKS HALF THE TIME?) This was eventually fixed by making the client run only after the server has started. Then I went and scanned it on antiscan and realised this technique somehow had a 6/26 detection ratio, somehow higher than before. sAd.
 
 ## Anti-VM done wrong
 Eventually I suspected that those AVs were flagging on heuristics, not based on the signature (since its a custom dropper), since some of them identified it specifically
@@ -88,9 +88,9 @@ tl;dr Python droppers have horrible OPSEC
 
 This led me to eventually start converting my offensive tools to C++ and Golang, as both these languages can be compiled into binaries (no interpreter gimmicks here!) which
 are much smaller, 1-2MB in size.
-
-
-
-
+  
+  
+  
+  
 # End Of File
 ## -- INSERT --
