@@ -42,9 +42,11 @@ building detections for my artifact kit profiles. But then, theres also another 
   
 ### SSH Tunneling
 This is the response when you try to login to a non Cobalt Strike server with the Cobalt Strike client:  
+  
  ![sad](./protecting_my_teamservers_img/conn_failed.png)
    
 But this is what you get if you try logging into a real teamserver with an incorrect password:  
+  
  ![sad](./protecting_my_teamservers_img/wrong_pass.png)
    
  I'm not entirely sure how efficient it would be to fingerprint teamservers this way, but I dont want ANYBODY trying to fingerprint my box as a Cobalt Strike teamserver
@@ -54,6 +56,7 @@ But this is what you get if you try logging into a real teamserver with an incor
  I decided to use a very simple trick to prevent people from being able to try to login: [SSH tunneling](https://www.ssh.com/academy/ssh/tunneling/example).
  So by setting up iptables rules to block all traffic to my login port from 0.0.0.0, and a rule that allows traffic to that port from 127.0.0.1. This way, outsiders who try
  to connect to it will just get connection refused.  
+   
   ![sad](./protecting_my_teamservers_img/conn_refused.png)
  
  All I need to do to login, is create an SSH tunnel from the server to my box with the following command:  
@@ -62,4 +65,5 @@ But this is what you get if you try logging into a real teamserver with an incor
  ```
    
  And now I can login normally with the Cobalt Strike client!  
+   
   ![sad](./protecting_my_teamservers_img/connected.png)
