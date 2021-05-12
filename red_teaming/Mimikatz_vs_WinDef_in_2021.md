@@ -51,9 +51,9 @@ I found this great tool called [Donut](https://github.com/TheWover/donut) that t
 a few minutes later...Poof! mimikatz shellcode!  
   
 So I threw it in my dropper and...No command line output. Lets see if it executed properly.  
-One x64Dbg session later, I found the mimikatz shellcode in memory. So it did decrypt and write to memory correctly. Maybe the problem is that its not in the current
-thread... I eventually found a set of arguments to pass to the memory functions in the dropper that made it select the current thread to execute in, and we have
-mimikatz working!
+One x64Dbg session later, I found the mimikatz shellcode in memory, meaning it did write the shellcode properly. I eventually determined the problem was that it was not
+running the code in the current thread, so I found a set of arguments to pass to the memory functions in the dropper that made it select the current thread to execute in,
+and we have mimikatz working!
   
 ![yay](./Mimikatz_vs_WinDef_in_2021_img/dropper_mimikatz1.png)
   
