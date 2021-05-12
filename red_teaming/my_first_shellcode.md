@@ -5,9 +5,10 @@
 ### root@codex # ls
 ### boxes code red_teaming CTF about
 ### root@codex # cd ./red_teaming
+[Go up 1 directory](../boxes.md)
 ### root@codex # vi my_first_shellcode.md
 
-[Go up 1 directory](../)
+
 # My first shellcode runner
 (Note: This was done like 2 years before this git pages site existed, just putting this here as a test page tbh LOL)
 
