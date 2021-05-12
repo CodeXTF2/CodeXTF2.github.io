@@ -3,7 +3,7 @@
 ###  this system may be monitored and recorded by system personnel.                                                                   
 ###           Other than that, feel free to look around!  
 ### root@codex # ls
-### [boxes](./boxes.md) [code](./code.md) [red_teaming](./red_teaming.md) [CTF](./ctf.md) [about](./about.md)
+### boxes code red_teaming CTF about
 ### root@codex # cd ./red_teaming
 ### root@codex # vi Mimikatz_vs_WinDef_in_2021
   
