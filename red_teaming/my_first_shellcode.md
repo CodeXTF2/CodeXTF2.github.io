@@ -82,7 +82,7 @@ These ideas would eventually be used in of most of my AV evaded droppers in the 
 
 ## Python droppers = bad
 I quickly realised there was a huge problem with python. The python code is stored in the binary, with a small python interpreter. This causes 2 problems. Firstly, all
-my binaries were like 20MB, even with the tiniest shellcode payloads e.g. calc. Even after UPX ultra brute, this would still be around 10MB I tried to strip the symbols, but it didn't work for me. The friend was able to do it though, for reasons I still do not know. That reduced it to around 7MB, which is still way too big for a calc payload. 
+my binaries were like 20MB, even with the tiniest shellcode payloads e.g. calc. Even after UPX ultra brute, this would still be around 10MB. I tried to strip the symbols, but it didn't work for me. The friend was able to do it though, for reasons I still do not know. That reduced it to around 7MB, which is still way too big for a calc payload. 
 Secondly, it is probably super easy to reverse engineer and signature, since its still python code. It also happens to write some files to a temp directory.  
 tl;dr Python droppers have horrible OPSEC
 
