@@ -3,7 +3,7 @@
 ###  this system may be monitored and recorded by system personnel.                                                                   
 ###           Other than that, feel free to look around!  
 ### root@codex # ls
-### boxes code read_teaming CTF about
+### boxes code red_teaming CTF about
 ### root@codex # cd ./red_teaming
 ### root@codex # vi my_first_shellcode.md
 
