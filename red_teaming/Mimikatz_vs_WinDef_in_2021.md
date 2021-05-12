@@ -31,7 +31,7 @@ if there's anyone watching alerts over at the blue team...
 
 ### In memory execution using an agent
   
-![beacon](Mimikatz_vs_WinDef_in_2021/beacon_mimikatz.png)
+![beacon](red_teaming/Mimikatz_vs_WinDef_in_2021/beacon_mimikatz.png)
   
 This has so far been my most reliable method. Using an existing in memory agent such as Cobalt Strike's Beacon, or Metasploit's Meterpreter to execute mimikatz commands
 has almost always worked for me so far. Sometimes it has been caught after execution (but it still did execute), similarly to reflectively loading it. On most occasions,
