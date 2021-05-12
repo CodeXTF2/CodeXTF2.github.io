@@ -31,7 +31,7 @@ with my beacons >:C
 ## Securing my teamservers
   
 ### Whitelist IP Ranges
-The most simple way to prevent random stuff from getting to my teamserver was to whitelist IP ranges I expected traffic to come from. So normally I would whitelist the IP ranges of say, a country or state I expected some callbacks to come from. That way, if random security vendors (Or [these guys](https://www.youtube.com/watch?v=nX9JXI4l3-E) ) start masscanning the internet, my IP wont even be contactable.
+The most simple way to prevent random stuff from getting to my teamserver was to whitelist IP ranges I expected traffic to come from. So normally I would whitelist the IP ranges of say, a country or state I expected some callbacks to come from. That way, if random security vendors (Or [these guys](https://www.youtube.com/watch?v=nX9JXI4l3-E)) start masscanning the internet, my IP wont even be contactable.
   
 ### Disable Payload staging
 So the first thing I did was disable payload staging. Since anyone can easily use this feature to grab a copy of your artifacts, payload staging can be an OPSEC concern.
