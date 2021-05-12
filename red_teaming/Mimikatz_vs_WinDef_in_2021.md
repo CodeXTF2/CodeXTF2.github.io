@@ -60,12 +60,16 @@ Now, lets test it against AV!
 
 Oh no, 4 detections. It seems like they are flagging it as Mimikatz, so they might have found the decryption key in the binary and used it to obtain the shellcode. Lets try
 staging the decryption key, or having it generated at runtime somehow...
-
+  
+![fud](./Mimikatz_vs_WinDef_in_2021_img/mimikatz_fud.png)
+  
 Yay! 0 detections. Now lets try it on Windows with Cloud protection enabled...
 
 It loaded fine, but once the mimikatz UI popped up, it got flagged and the process was killed. Maybe the mimikatz shellcode blob in memory is detected after all... Lets try modifying the mimikatz binary before passing it into donut. For AV evasion purposes, I will not be showing the changes made the the binary beforehand, but they are not major, and do not affect any functionality of the mimikatz binary itself.
+
+I then converted the modified binary to shellcode like before, and threw it in the working mimikatz dropper code I had before.
   
-![fud](./Mimikatz_vs_WinDef_in_2021_img/mimikatz_fud.png)
+![wheee](./Mimikatz_vs_WinDef_in_2021_img/mimikatz_final.png)
   
 Yay! it works!
 
