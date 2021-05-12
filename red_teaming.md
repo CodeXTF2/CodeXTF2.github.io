@@ -6,5 +6,10 @@
 ### [boxes](./boxes.md) [code](./code.md) [red_teaming](./red_teaming.md) [CTF](./ctf.md) [about](./about.md)
 ### root@codex # cd ./red_teaming
 ### root@codex # ls
-### [../](../) [my_first_shellcode.md](red_teaming/my_first_shellcode.md)
+### [../](../)  
+### [my_first_shellcode.md](red_teaming/my_first_shellcode.md)  
+### [Protecting_my_teamservers](red_teaming/protecting_my_teamservers.md)
+### [Sending_discord_notifications_via_AggressorScript](Sending_discord_notifications_via_AggressorScript)
+### [Mimikatz_vs_WinDef_in_2021](red_teaming/Mimikatz_vs_WinDef_in_2021.md)
+### [Staging_from_whitelisted_domains](red_teaming/Staging_from_whitelisted_domains.md)
 ### root@codex # _
