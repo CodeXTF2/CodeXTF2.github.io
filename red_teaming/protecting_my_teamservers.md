@@ -64,6 +64,6 @@ But this is what you get if you try logging into a real teamserver with an incor
  ssh user@my.ip.here -L 50050:127.0.0.1:50050
  ```
    
- And now I can login normally with the Cobalt Strike client!  
+Now everything I send to 127.0.0.1:50050 will actually go to my.ip.here:50050 thanks to that SSH tunnel, so I can login normally with the Cobalt Strike client!  
    
   ![sad](./protecting_my_teamservers_img/connected.png)
