@@ -73,9 +73,10 @@ Flag obtained!
 (original challenge text was forgotten :( but it talked about a memory dump in the DC)
   
 ### Solution  
-Since the challenge text talked about a memory dump in the DC, I enumerated the shares I could access using liam.a  
-and found the "Forensics" share which contained a file named lsass.dmp. This was obviously a dump of the lsass.exe  
-process, which windows uses to store credentials. Mimikatz was used to extract credentials (and the flag).
+Since the challenge text talked about a memory dump in the DC, I enumerated the shares I could access  
+using liam.a and found the "Forensics" share which contained a file named lsass.dmp. This was obviously  
+a dump of the lsass.exe process, which windows uses to store credentials. Mimikatz was used to extract  
+credentials (and the flag).  
 
 ```
 PS C:\Users\User\Desktop\mimikatz\x64> .\mimikatz.exe
@@ -156,12 +157,13 @@ The first password was the flag, but there was also a second password to a user 
 You’re doing great! We almost there, but we need to find a way to take control of this server. What about the backup folder?
   
 ### Solution  
-The backup folder was not accessible by the user liam.a. At first, I authenticated to the share using the credentials  
-for the "John" user discovered in the memory dump.
+The backup folder was not accessible by the user liam.a. At first, I authenticated to the share  
+using the credentials for the "John" user discovered in the memory dump.  
   
-The share contained a file named "creds.txt", which was an empty file. After quite a while trying to figure out if the box had  
-been tampered with (again), I used the "allinfo" command in smbclient to see if there were any Alternate Data Streams, since  
-the challenge name was "Alternate Way", which was hinting at an ADS. Sure enough, there was the flag!
+The share contained a file named "creds.txt", which was an empty file. After quite a while trying  
+to figure out if the box had been tampered with (again), I used the "allinfo" command in smbclient  
+to see if there were any Alternate Data Streams, since the challenge name was "Alternate Way", which  
+was hinting at an ADS. Sure enough, there was the flag!
 
 ```
 cat creds.txt_flag.txt_$DATA
@@ -173,12 +175,13 @@ CDDC21{An0the4_STREAM!}
 
 
 ## Challenge downtime and poor technical support  
-Firstly, there was no instruction given against port scanning the AD server (which I did). This seems to have caused the server to  
-IP ban me. I quickly realised that I was no longer able to connect to the server. I contacted an admin, who seemed to be unable to  
-resolve the issue or provide any form of solution.  
+Firstly, there was no instruction given against port scanning the AD server (which I did).  
+This seems to have caused the server to IP ban me. I quickly realised that I was no longer  
+able to connect to the server. I contacted an admin, who was unable to resolve the incident.  
 While issues like this do occur in CTF, it is common to provide multiple target  
-servers for each challenge to allow participants to continue doing the challenge even if one of the servers has any technical issues.  
-No alternate servers were provided for any of the challenges during this CTF.
+servers for each challenge to allow participants to continue doing the challenge even if one  
+of the servers has any technical issues. No alternate servers were provided for any of the  
+challenges during this CTF.
 
 
 ```
@@ -209,15 +212,18 @@ all i did was port scan it
 :(((((((((
 ```
 
-Initially, the authentication to the Backup share with the user "John" failed due to a mistake in the target server configuration.  
-This wasted quite a lot of time, as I quickly moved on and started re-enumerating the server. This could have been easily  
-avoided had the organizers taken the challenge down temporarily and announced in the Discord server that they were performing  
-maintenance on the challenge. However, this was not the case, just like many other incidents that occured during this CTF. I eventually  
-suspected something was wrong and contacted an administrator to ask about the challenge, and recieved a response claiming the challenge  
+Initially, the authentication to the Backup share with the user "John" failed due to a mistake in
+the target server configuration. This wasted quite a lot of time, as I quickly moved on and  
+started re-enumerating the server. This could have been easily avoided had the organizers taken  
+the challenge down temporarily and announced in the Discord server that they were performing  
+maintenance on the challenge. However, this was not the case, just like many other incidents  
+that occured during this CTF. I eventually suspected something was wrong and contacted an  
+administrator to ask about the challenge, and recieved a response claiming the challenge  
 was working fine.  
   
-Luckily I went back to the share later on with the same credentials just to check, and sure enough, it worked.  
-Shortly after, I received a message from the administrator, who seemed to have realised his mistake.  
+Luckily I went back to the share later on with the same credentials just to check, and sure  
+enough, it worked. Shortly after, I received a message from the administrator, who seemed to have
+realised his mistake.  
 
   
 ```
