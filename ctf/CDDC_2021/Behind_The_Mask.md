@@ -1,6 +1,7 @@
 # Behind The Mask
 
 This was a series of offensive Active Directory challenges hosted during CDDC 2021.
+The challenges must be solved in order.
 
 ## Challenge #1: Light  
 ### Points: 200
@@ -18,7 +19,7 @@ ctrl+F'ed for the flag format.
   
 ![flag](./Behind_The_Mask/light.png)
 
-## Challenge #1: Get a Ticket
+## Challenge #2: Get a Ticket
 ### Points: 300
 ### Challenge Text:  
 We must find a way to access the shared folders configured on this server. I don’t see anyway, but maybe you can figure it out…
@@ -64,7 +65,7 @@ CDDC21{4S_REP_R0A$T}
 ```  
 Flag obtained!
 
-## Challenge #1: Old Memories
+## Challenge #3: Old Memories
 ### Points: 300
 ### Challenge Text:  
 (original challenge text was forgotten :( but it talked about a memory dump in the DC)
@@ -147,7 +148,7 @@ SID               : S-1-5-21-2198713953-2006436724-2838398043-1001
   
 The first password was the flag, but there was also a second password to a user named John. Lets save that for later.  
 
-## Challenge #1: Alternate Way
+## Challenge #4: Alternate Way
 ### Points: 500
 ### Challenge Text:  
 You’re doing great! We almost there, but we need to find a way to take control of this server. What about the backup folder?
