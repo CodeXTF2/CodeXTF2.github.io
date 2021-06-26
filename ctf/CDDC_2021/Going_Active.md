@@ -1,5 +1,5 @@
 # Going Active
-This is a series of active scanning challenges hosted during CDDC 2021.
+This is a set of active scanning challenges hosted during CDDC 2021.
 I forgot most of the challenge texts exactly, but I documented information provided.
 Apologies for the lack of screenshots, the CTF platform and all challenges were completely
 taken offline very shortly after the CTF ended.
