@@ -6,6 +6,10 @@ I forgot most of the challenge texts exactly, but I documented information provi
 Apologies for the lack of screenshots, the CTF platform and all challenges were completely
 taken offline very shortly after the CTF ended.
 
+This is the category I had the most success with on day 1 of the CTF. I managed to solve  
+all the challenges on the first day of the CTF. This category of challenges was very similar  
+to techniques used for recon in vulnerable boxes in HTB, VulnHub and the PWK Labs.
+  
 ## Mounting
 ### Points: 200
 ### Challenge text:
@@ -53,7 +57,6 @@ and opened it as a zip. The flag file inside is shown here.
 (forgot, but a URL was provided: dev02.globaldominationcorporation.xyz  
 Something was said about not being able to access the server.)
 
-This is the category I had the most success
   
 ### Solution
 Challenge name is VH2, which stands for Virtual Host 2. I checked the certificate and found  
