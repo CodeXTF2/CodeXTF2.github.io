@@ -7,4 +7,4 @@
 ### root@codex # cd ./ctf
 ### root@codex # ls
 ### [../](../)
-### [CDDC_2021](./CDDC_2021.md)
+### [CDDC_2021](./CTF/CDDC_2021.md)
