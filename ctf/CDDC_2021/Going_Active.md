@@ -54,12 +54,14 @@ and opened it as a zip. The flag file inside is shown here.
 Something was said about not being able to access the server.)
   
 ### Solution
-Challenge name is VH2, which stands for Virtual Host 2. I checked the certificate and found the subdomain gdc-internal02.
-Seems like a typical VHOST challenge, the steps taken to access the flag were:
+Challenge name is VH2, which stands for Virtual Host 2. I checked the certificate and found  
+the subdomain gdc-internal02.
+Seems like there was a second VHOST, the steps taken to access the flag were:
   
 ```
 1. ping the url to find the ip
 2. add the subdomain gdc-internal02 to /etc/hosts with the ip found
 3. access webpage
+4. Flag found!
 ```
 (sorry, flag was not saved :C )
