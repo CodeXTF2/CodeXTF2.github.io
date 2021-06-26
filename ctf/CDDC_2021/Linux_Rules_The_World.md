@@ -75,7 +75,7 @@ I pasted the following regex into an online regex tester, along with the challen
 This regex matches for a line that starts with CDDC21{ and ends with }.  
 Flag found! CDDC21{Th1s_!s_IT}
   
-## Challenge #2: Another Path
+## Challenge #3: Another Path
 ### Points: 200
 ### Challenge text: 
 You must continue and pwn this machine. Please don’t bother me with all those bots. I know they’re connected somehow. If you feel stuck, try to take another path.
