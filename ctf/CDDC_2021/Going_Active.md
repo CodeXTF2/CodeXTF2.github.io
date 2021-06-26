@@ -52,6 +52,8 @@ and opened it as a zip. The flag file inside is shown here.
 ### Challenge text:
 (forgot, but a URL was provided: dev02.globaldominationcorporation.xyz  
 Something was said about not being able to access the server.)
+
+This is the category I had the most success
   
 ### Solution
 Challenge name is VH2, which stands for Virtual Host 2. I checked the certificate and found  

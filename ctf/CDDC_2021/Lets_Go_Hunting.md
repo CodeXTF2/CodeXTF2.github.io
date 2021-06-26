@@ -3,6 +3,10 @@
 # Lets Go Hunting
 This is a set of OSINT challenges hosted during CDDC 2021.
 
+These challenges were possibly some of the easier challenges, going by the solve count.  
+However, we only solved both of them on the second day of the CTF, due to going on a wrong  
+track on day 1.
+  
 ## Broken System
 ### Points: 200
 ### Challenge text: 
