@@ -39,7 +39,8 @@ Kerberos tickets for the user liam.a were obtained. The tickets were roasted and
   
 Using the password p@ssw0rd and the user liam.a, I listed the network shares.
 
-```smbclient -L //18.136.74.102/ -U liam.a
+```
+smbclient -L //18.136.74.102/ -U liam.a
 Enter WORKGROUP\liam.a's password: 
 
         Sharename       Type      Comment
@@ -51,8 +52,10 @@ Enter WORKGROUP\liam.a's password:
         IPC$            IPC       Remote IPC                                                                                                                                                                        
         Mission2 Flag   Disk                                                                                                                                                                                        
         NETLOGON        Disk      Logon server share                                                                                                                                                                
-        SYSVOL          Disk      Logon server share   ```
+        SYSVOL          Disk      Logon server share  
 
-```smbclient //18.136.74.102/Mission2\ Flag -U liam.a```
-```cat flag.txt  
+
+smbclient //18.136.74.102/Mission2\ Flag -U liam.a  
+...
+cat flag.txt  
 CDDC21{4S_REP_R0A$T}```
