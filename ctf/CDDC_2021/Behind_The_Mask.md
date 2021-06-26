@@ -1,3 +1,5 @@
+## [Up 1 directory](../)
+  
 # Behind The Mask
 
 This was a series of offensive Active Directory challenges hosted during CDDC 2021.
