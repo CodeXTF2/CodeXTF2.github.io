@@ -215,8 +215,7 @@ was working fine.
   
 Luckily I went back to the share later on with the same credentials just to check, and sure enough, it worked.  
 Shortly after, I received a message from the administrator, who seemed to have realised his mistake.  
-  
-If not for the administrator giving an inaccurate reply on the status of the challenge, I could have solved it hours earlier.
+
   
 ```
 CodeX — Yesterday at 1:53 AM
