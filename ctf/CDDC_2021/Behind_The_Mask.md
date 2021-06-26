@@ -58,4 +58,5 @@ Enter WORKGROUP\liam.a's password:
 smbclient //18.136.74.102/Mission2\ Flag -U liam.a  
 ...
 cat flag.txt  
-CDDC21{4S_REP_R0A$T}```
+CDDC21{4S_REP_R0A$T}
+```
