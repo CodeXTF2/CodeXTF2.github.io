@@ -4,6 +4,17 @@
 
 This was a series of offensive Active Directory challenges hosted during CDDC 2021.
 The challenges must be solved in order.
+  
+This is my personal favourite category, as it is the most similar to traditional  
+red teaming, with domain enumeration, ASREP-Roasting, credential dumping and a bit  
+of looting SMB shares.  
+  
+I was looking forward to gaining code execution so that I could practice some  
+lateral movement and test some of my custom post exploitation agents, but no  
+code execution was obtained, even using the valid credentials with WinRM, PsExec  
+and other common techniques. This category also faced some stability issues,  
+especially on the last challenge. However, the challenges themselves were relatively  
+well made, covering some basic offensive windows techniques.
 
 ## Challenge #1: Light  
 ### Points: 200
@@ -12,7 +23,28 @@ It’s time to expose the GDC! We have successfully obtained the IP address of t
 First, try to list the different users that are configured on the server.  
   
 ### Solution  
-The list of users from the DC can be obtained with the following command:  
+The first step to enumerating the DC is to find the local domain name. This was found  
+by an nmap scan.
+
+```
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- 18.136.74.102
+  
+...
+  
+
+3389/tcp  open  ms-wbt-server syn-ack ttl 128 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: GDC
+|   NetBIOS_Domain_Name: GDC
+|   NetBIOS_Computer_Name: GDC-DC-S
+|   DNS_Domain_Name: gdc.local
+|   DNS_Computer_Name: GDC-DC-S.gdc.local
+|   DNS_Tree_Name: gdc.local
+|   Product_Version: 10.0.14393
+|_  System_Time: 2021-06-24T10:35:47+00:00
+```
+
+The list of users from the DC can then be obtained with the following command:  
 ```
 ldapsearch -LLL -x -H ldap://18.136.74.102 -b ‘DC=gdc,DC=local' > enumAD.txt
 ```  
@@ -31,7 +63,7 @@ Since these challenges are locked in order, I assume that each challenge is depe
 previous one. Since the previous challenge was to get a list of users, I originally assumed the solution was to
 find a service account and kerberoast it.  
   
-However, no accounts vulnerable to kerberoasting were found. We eventually solved the challenge by ASREP-Roast-ing user accounts
+However, no accounts vulnerable to kerberoasting were found. We eventually solved the challenge by ASREP-Roasting user accounts
 found in the previous challenge for kerberos tickets. The following command was used:
 
 python GetNPUsers.py gdc.local/ -usersfile usernames.txt -format hashcat -outputfile tickets.txt

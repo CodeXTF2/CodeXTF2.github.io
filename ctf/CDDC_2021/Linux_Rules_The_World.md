@@ -3,6 +3,15 @@
 # Linux Rules The World!
 This is a series of Linux challenges hosted during CDDC 2021.
 The challenges must be solved in order.
+
+Much less time was able to be spent on this series of challenges, due to stability issues.  
+Users in the box were able to kill other users processes, flood terminals with the wall command,  
+and tamper with the challenges. Due to lack of technical intervention from the organizers, the  
+uptime of this challenge was so low that it was no longer worth spending time on. I honestly was  
+hoping to be able to try them, as linux challenges are another of my favourite challenge  
+categories due to my experiences while taking the PWK course. Hopefully in the future, these  
+challenges will be hosted somewhere where I can attempt them without the box going down once  
+every few seconds.  
   
 ## Challenge #1: Opening The Gate
 ### Points: 200
