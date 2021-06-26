@@ -1,4 +1,4 @@
-## [Up 1 directory](../)
+## [Up 1 directory](../CDDC_2021.md)
   
 # Lets Go Hunting
 This is a set of OSINT challenges hosted during CDDC 2021.

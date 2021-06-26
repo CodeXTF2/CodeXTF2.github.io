@@ -1,4 +1,4 @@
-## [Up 1 directory](../)
+## [Up 1 directory](../CDDC_2021.md)
   
 # Going Active
 This is a set of active scanning challenges hosted during CDDC 2021.
