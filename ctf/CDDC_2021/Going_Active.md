@@ -55,7 +55,7 @@ Something was said about not being able to access the server.)
   
 ### Solution
 Challenge name is VH2, which stands for Virtual Host 2. I checked the certificate and found  
-the subdomain gdc-internal02.
+the alternate name gdc-internal02.globaldominationcorporation.xyz
 Seems like there was a second VHOST, the steps taken to access the flag were:
   
 ```
