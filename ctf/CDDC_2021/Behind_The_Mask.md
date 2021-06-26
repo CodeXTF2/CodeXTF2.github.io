@@ -170,7 +170,11 @@ CDDC21{An0the4_STREAM!}
 ## Challenge downtime and poor technical support  
 Firstly, there was no instruction given against port scanning the AD server (which I did). This seems to have caused the server to  
 IP ban me. I quickly realised that I was no longer able to connect to the server. I contacted an admin, who seemed to be unable to  
-resolve the issue or provide any form of solution.
+resolve the issue or provide any form of solution.  
+While issues like this do occur in CTF, it is common to provide multiple target  
+servers for each challenge to allow participants to continue doing the challenge even if one of the servers has any technical issues.  
+No alternate servers were provided for any of the challenges during this CTF.
+
 
 ```
 CodeX — 06/24/2021
