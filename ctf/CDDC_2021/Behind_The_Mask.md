@@ -163,8 +163,43 @@ cat creds.txt_flag.txt_$DATA
 CDDC21{An0the4_STREAM!} 
 ```
 
+  
+  
 
-### Challenge downtime and poor technical support  
+
+## Challenge downtime and poor technical support  
+Firstly, there was no instruction given against port scanning the AD server (which I did). This seems to have caused the server to  
+IP ban me. I quickly realised that I was no longer able to connect to the server. I contacted an admin, who seemed to be unable to  
+resolve the issue or provide any form of solution.
+
+```
+CodeX — 06/24/2021
+hi i appear to have been ip banned from the AD server
+i ran nmap on it
+[Name Redacted] — 06/24/2021
+I'll check, which mission?
+CodeX — 06/24/2021
+2
+the one about the shared folder
+i can login from another host but my home network cannot login to it
+network times out
+[Name Redacted] — 06/24/2021
+ok one moment
+[Name Redacted] — 06/24/2021
+Sorry currently there is an issue preventing us from releasing your IP address
+CodeX — 06/24/2021
+hi, is everything ok?
+[Name Redacted] — 06/24/2021
+It might get release by itself overtime. If we fix the issue I'll let you know
+CodeX — 06/24/2021
+oh ok sad
+[Name Redacted] — 06/24/2021
+Very sorry
+CodeX — 06/24/2021
+all i did was port scan it
+:(((((((((
+```
+
 Initially, the authentication to the Backup share with the user "John" failed due to a mistake in the target server configuration.  
 This wasted quite a lot of time, as I quickly moved on and started re-enumerating the server. This could have been easily  
 avoided had the organizers taken the challenge down temporarily and announced in the Discord server that they were performing  
