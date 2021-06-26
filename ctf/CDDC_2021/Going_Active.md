@@ -60,4 +60,4 @@ Seems like a typical VHOST challenge, the steps taken to access the flag were:
 2. add the subdomain gdc-internal02 to /etc/hosts with the ip found
 3. access webpage
 ```
-(sorry, flag was not saved :[ )
+(sorry, flag was not saved :C )
