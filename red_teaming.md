@@ -1,5 +1,5 @@
 # MOVED TO GITBOOK!
-## https://codex-7.gitbook.io/codexs-terminal-window/
+## [https://codex-7.gitbook.io/codexs-terminal-window/](https://codex-7.gitbook.io/codexs-terminal-window/)
 ## THIS PAGE WILL NO LONGER BE UPDATED!
 # Welcome to my terminal window!                                                               
 ###  This system is for the use of authorized users only.  Usage of   
