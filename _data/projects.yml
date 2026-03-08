@@ -1,11 +1,11 @@
 - name: Beacon Object Files (BOFs)
   desc: Multiple popular Cobalt Strike Beacon Object Files enhancing the stealth and post-exploitation capabilities of the Beacon implant.
-  github: https://github.com/CodeXTF2
+  github: https://github.com/CodeXTF2/WindowSpy
 
 - name: CustomC2ChannelTemplate
   desc: Framework for development of custom C2 channels for Cobalt Strike, implemented via IAT hooks independent of the ExternalC2 interface.
-  github: https://github.com/CodeXTF2
+  github: https://github.com/CodeXTF2/CustomC2ChannelTemplate
 
 - name: OpenMalleableC2
   desc: Framework-agnostic library implementing Cobalt Strike's Malleable C2 profile format for HTTP transformations.
-  github: https://github.com/CodeXTF2
+  github: https://github.com/CodeXTF2/OpenMalleableC2
