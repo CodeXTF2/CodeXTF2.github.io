@@ -638,6 +638,22 @@ section {
   }
 }
 
+/* ─── SUBSECTION TITLE ──────────────────────────────────────────────────── */
+.subsection-title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  i { color: var(--accent); font-size: 14px; }
+}
+
 /* ─── CERTIFICATIONS ────────────────────────────────────────────────────── */
 .certifications {
   .certs-grid {
@@ -672,6 +688,12 @@ section {
       justify-content: center;
       font-size: 18px;
       color: var(--accent);
+
+      &.edu-icon {
+        background: rgba(189, 147, 249, 0.08);
+        border-color: rgba(189, 147, 249, 0.25);
+        color: var(--purple);
+      }
     }
 
     .cert-info {

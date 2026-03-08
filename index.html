@@ -101,18 +101,6 @@ title: Home
           where I write about in-memory evasion, tradecraft etc.
         </p>
 
-        <div class="edu-list" style="margin-top:40px;">
-          <div class="edu-card">
-            <div class="edu-degree">Bachelor of Science — Information Security</div>
-            <div class="edu-school">Singapore Institute of Technology</div>
-            <div class="edu-period">2022 – 2026</div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-degree">Diploma — Information Security Management</div>
-            <div class="edu-school">Singapore Polytechnic</div>
-            <div class="edu-period">2019 – 2022</div>
-          </div>
-        </div>
     </div>
   </div>
 </section>
@@ -184,19 +172,42 @@ title: Home
 <!-- ═══════════════════════════════════════════════════════ CERTIFICATIONS -->
 <section class="certifications" id="certifications">
   <div class="container">
-    <p class="section-label fade-in">04. certifications</p>
+    <p class="section-label fade-in">04. credentials</p>
     <h2 class="section-title fade-in">Credentials</h2>
 
+    <h3 class="subsection-title fade-in">
+      <i class="fas fa-certificate"></i> Certifications
+    </h3>
     <div class="certs-grid">
       {% for cert in site.data.certifications %}
       <div class="cert-card fade-in">
-        <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="cert-icon"><i class="fas fa-id-badge"></i></div>
         <div class="cert-info">
           <div class="cert-name">{{ cert.name }}</div>
           <div class="cert-year">{{ cert.issuer }} &middot; {{ cert.year }}</div>
         </div>
       </div>
       {% endfor %}
+    </div>
+
+    <h3 class="subsection-title fade-in" style="margin-top: 56px;">
+      <i class="fas fa-graduation-cap"></i> Education
+    </h3>
+    <div class="certs-grid">
+      <div class="cert-card fade-in">
+        <div class="cert-icon edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="cert-info">
+          <div class="cert-name">Bachelor of Science — Information Security</div>
+          <div class="cert-year">Singapore Institute of Technology &middot; 2022–2026</div>
+        </div>
+      </div>
+      <div class="cert-card fade-in">
+        <div class="cert-icon edu-icon"><i class="fas fa-school"></i></div>
+        <div class="cert-info">
+          <div class="cert-name">Diploma — Information Security Management</div>
+          <div class="cert-year">Singapore Polytechnic &middot; 2019–2022</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
