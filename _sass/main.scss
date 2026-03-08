@@ -271,7 +271,7 @@ section {
     gap: 10px;
 
     &::before {
-      content: '>';
+      content: 'beacon>';
       animation: blink 1.2s step-end infinite;
     }
   }
