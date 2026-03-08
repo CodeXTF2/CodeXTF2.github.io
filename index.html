@@ -1,0 +1,324 @@
+---
+layout: default
+title: Home
+---
+
+<!-- ═══════════════════════════════════════════════════════ NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">
+      ethan<span>.seow</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#certifications">certs</a></li>
+      <li><a href="#awards">awards</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li>
+        <a href="{{ site.author.blog }}" target="_blank" rel="noopener" class="blog-link">
+          <i class="fas fa-book-open"></i> blog
+        </a>
+      </li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about" class="nav-mobile-link">about</a>
+    <a href="#experience" class="nav-mobile-link">experience</a>
+    <a href="#projects" class="nav-mobile-link">projects</a>
+    <a href="#certifications" class="nav-mobile-link">certifications</a>
+    <a href="#awards" class="nav-mobile-link">awards</a>
+    <a href="#contact" class="nav-mobile-link">contact</a>
+    <a href="{{ site.author.blog }}" target="_blank" rel="noopener" class="blog-link">
+      <i class="fas fa-book-open"></i> blog
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-greeting fade-in">Hello, world</p>
+
+      <h1 class="hero-name fade-in" style="transition-delay:.1s">
+        Ethan Seow
+      </h1>
+
+      <p class="hero-tagline fade-in" style="transition-delay:.2s">
+        Offensive Researcher &amp; Red Team Operator
+      </p>
+
+      <p class="hero-desc fade-in" style="transition-delay:.3s">
+        I break things to make them stronger. I specialize in advanced EDR evasion,
+        red team tooling, and offensive security research — building open-source tools
+        used by the red team community.
+      </p>
+
+      <div class="hero-ctas fade-in" style="transition-delay:.4s">
+        <a href="{{ site.author.blog }}" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-book-open"></i> Read my blog
+        </a>
+        <a href="{{ site.author.github }}" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+
+      <p class="hero-badge fade-in" style="transition-delay:.5s">
+        <span></span>
+        Available for research collaborations &amp; red team engagements
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <p class="section-label fade-in">01. about me</p>
+    <h2 class="section-title fade-in">A bit about me</h2>
+
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>
+          I'm an offensive security researcher based in Singapore, currently pursuing a
+          Bachelor's in Information Security at the Singapore Institute of Technology
+          while working as a Cyber Offensive Intern at softScheck APAC.
+        </p>
+        <p>
+          My work sits at the intersection of red teaming and tool development — I build
+          open-source offensive tooling focused on EDR evasion, C2 infrastructure, and
+          post-exploitation. I believe the best way to defend systems is to deeply
+          understand how attackers think and operate.
+        </p>
+        <p>
+          I share my research on my
+          <a href="{{ site.author.blog }}" target="_blank" rel="noopener">blog</a>,
+          where I write about in-memory evasion, tradecraft, and lessons from the field.
+        </p>
+
+        <div class="edu-list" style="margin-top:40px;">
+          <div class="edu-card">
+            <div class="edu-degree">Bachelor of Science — Information Security</div>
+            <div class="edu-school">Singapore Institute of Technology</div>
+            <div class="edu-period">2022 – 2026</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">Diploma — Information Security Management</div>
+            <div class="edu-school">Singapore Polytechnic</div>
+            <div class="edu-period">2019 – 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-stats fade-in" style="transition-delay:.15s">
+        <div class="stat-card">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Years in OffSec</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Open Source Tools</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">CTF Awards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="container">
+    <p class="section-label fade-in">02. experience</p>
+    <h2 class="section-title fade-in">Where I've worked</h2>
+
+    <div class="timeline">
+      {% for job in site.data.experience %}
+      <div class="timeline-item fade-in">
+        <div class="timeline-header">
+          <span class="timeline-role">{{ job.role }}</span>
+          <span class="timeline-period">{{ job.period }}</span>
+        </div>
+        <div class="timeline-company">
+          {{ job.company }}{% if job.location %} &mdash; {{ job.location }}{% endif %}
+        </div>
+        <ul class="timeline-bullets">
+          {% for bullet in job.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ PROJECTS -->
+<section class="projects" id="projects">
+  <div class="container">
+    <p class="section-label fade-in">03. projects</p>
+    <h2 class="section-title fade-in">Things I've built</h2>
+
+    <p class="projects-intro fade-in">
+      I build and maintain open-source offensive security tooling focused on EDR evasion,
+      C2 frameworks, and red team tradecraft. All projects live on
+      <a href="{{ site.author.github }}" target="_blank" rel="noopener">my GitHub</a>.
+    </p>
+
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <div class="project-card fade-in">
+        <div class="project-top">
+          <div class="project-icon"><i class="fas fa-terminal"></i></div>
+          <div class="project-links">
+            <a href="{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-name">{{ project.name }}</div>
+        <div class="project-desc">{{ project.desc }}</div>
+        <div class="project-tags">
+          {% for tag in project.tags %}
+          <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="projects-cta fade-in">
+      <a href="{{ site.author.github }}" target="_blank" rel="noopener" class="btn btn-outline">
+        <i class="fab fa-github"></i> View all on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CERTIFICATIONS -->
+<section class="certifications" id="certifications">
+  <div class="container">
+    <p class="section-label fade-in">04. certifications</p>
+    <h2 class="section-title fade-in">Credentials</h2>
+
+    <div class="certs-grid">
+      {% for cert in site.data.certifications %}
+      <div class="cert-card fade-in">
+        <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="cert-info">
+          <div class="cert-name">{{ cert.name }}</div>
+          <div class="cert-year">{{ cert.issuer }} &middot; {{ cert.year }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ AWARDS -->
+<section class="awards" id="awards">
+  <div class="container">
+    <p class="section-label fade-in">05. awards</p>
+    <h2 class="section-title fade-in">Recognition</h2>
+
+    <div class="awards-list">
+      {% for award in site.data.awards %}
+      <div class="award-item fade-in">
+        <div class="award-left">
+          <span class="award-icon"><i class="fas fa-trophy"></i></span>
+          <span class="award-name">{{ award.name }}</span>
+        </div>
+        <span class="award-year">{{ award.year }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ PUBLICATIONS -->
+<section class="publications" id="publications">
+  <div class="container">
+    <p class="section-label fade-in">06. research</p>
+    <h2 class="section-title fade-in">Publications &amp; Talks</h2>
+
+    <div class="pub-card fade-in">
+      <div class="pub-icon"><i class="fas fa-microphone-lines"></i></div>
+      <div class="pub-body">
+        <div class="pub-title">Evasion Adventures</div>
+        <div class="pub-venue">
+          <i class="fas fa-location-dot"></i> Division Zero (Div0) &mdash; Singapore
+        </div>
+        <p class="pub-desc">
+          Presented at Division Zero on modern in-memory evasion tradecraft for red teams,
+          exploring techniques to bypass enterprise EDRs while operating with Beacon.
+          Covered live demonstrations, detection logic analysis, and practical evasion strategies
+          for modern defensive stacks.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 32px;" class="fade-in">
+      <a href="{{ site.author.blog }}" target="_blank" rel="noopener" class="btn btn-outline">
+        <i class="fas fa-book-open"></i> Read more on my blog
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="section-label fade-in">07. contact</p>
+    <h2 class="section-title fade-in">Get in touch</h2>
+
+    <div class="contact-inner">
+      <p class="contact-text fade-in">
+        Whether you have a red team engagement, a research collaboration, or just want
+        to talk offensive security — my inbox is always open.
+      </p>
+
+      <a href="mailto:{{ site.author.email }}" class="contact-email fade-in">
+        {{ site.author.email }}
+      </a>
+
+      <div class="contact-links fade-in">
+        <a href="{{ site.author.blog }}" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-book-open"></i> Blog
+        </a>
+        <a href="{{ site.author.github }}" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" class="btn btn-ghost">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>Designed &amp; built by <a href="{{ site.author.github }}" target="_blank" rel="noopener">Ethan Seow</a></p>
+    <p>
+      <a href="{{ site.author.blog }}" target="_blank" rel="noopener">codex-7.gitbook.io</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    </p>
+  </div>
+</footer>

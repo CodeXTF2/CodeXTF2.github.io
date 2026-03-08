@@ -1,0 +1,39 @@
+- name: Beacon Object Files (BOFs)
+  desc: Multiple popular Cobalt Strike Beacon Object Files enhancing the stealth and post-exploitation capabilities of the Beacon implant.
+  tags: [Cobalt Strike, C, Post-Exploitation, EDR Evasion]
+  github: https://github.com/CodeXTF2
+
+- name: CustomC2ChannelTemplate
+  desc: Framework for development of custom C2 channels for Cobalt Strike, implemented via IAT hooks independent of the ExternalC2 interface.
+  tags: [Cobalt Strike, C, IAT Hooking, C2]
+  github: https://github.com/CodeXTF2
+
+- name: LoaderFramework4
+  desc: Modular, extensible generator to simplify the personal development workflow of evasive shellcode loaders.
+  tags: [C, Shellcode, EDR Evasion, Loader]
+  github: https://github.com/CodeXTF2
+
+- name: OpenMalleableC2
+  desc: Framework-agnostic library implementing Cobalt Strike's Malleable C2 profile format for HTTP transformations.
+  tags: [Go, Malleable C2, Framework-Agnostic]
+  github: https://github.com/CodeXTF2
+
+- name: YaraAway
+  desc: Tool to break static YARA signatures in precompiled binaries without requiring source code or PDB files.
+  tags: [Python, YARA, AV Bypass, Binary Patching]
+  github: https://github.com/CodeXTF2
+
+- name: Extending Cobalt Strike
+  desc: Miscellaneous tooling to extend Cobalt Strike, including a Malleable C2 profile generator and a headless client.
+  tags: [Cobalt Strike, Python, C2]
+  github: https://github.com/CodeXTF2
+
+- name: Autorize_RBAC
+  desc: Fork of the Burp Suite Autorize extension adding support for multi-role RBAC testing.
+  tags: [Python, Burp Suite, Web Pentesting, RBAC]
+  github: https://github.com/CodeXTF2
+
+- name: Personal EDR Evasion Research
+  desc: Ongoing personal research and testing of Beacon against enterprise EDRs and detection rules, staying current with the latest evasion tradecraft.
+  tags: [Research, EDR, Cobalt Strike, Tradecraft]
+  github: https://github.com/CodeXTF2

@@ -1,0 +1,40 @@
+- role: Intern — Cyber Offensive
+  company: softScheck APAC
+  location: Singapore
+  period: May 2025 – Apr 2026
+  bullets:
+    - Specialized in delivering stealth-based red teaming in modern environments with EDR
+    - Communicated red team engagement results to stakeholders and management
+    - Created COSG's playbooks and tools for red teaming operations
+    - Automated deployment of resilient C2 infrastructure
+    - Worked with sales to scope and plan red team proposals
+    - Performed web and network penetration testing
+    - Developed tools to streamline penetration testing processes
+
+- role: Freelance — Cyber Range Development
+  company: ASYNC Security Labs
+  location: Remote
+  period: Dec 2024
+  bullets:
+    - Deployed cyber ranges with Ansible and Ludus
+    - Designed realistic cyber range scenarios focused on Active Directory attacks
+
+- role: Contract — Offensive Research
+  company: Altered Security
+  location: Remote
+  period: Jul – Oct 2024
+  bullets:
+    - Research and development on evading enterprise EDRs (Elastic Defend, Microsoft Defender for Endpoint)
+    - Research and development on evading Mark Of The Web (MOTW) for phishing attacks
+    - Research and development on lateral movement in Active Directory while evading EDR
+    - Developed simulated users for realistic training environments
+    - Documented offensive tools and tradecraft for course material
+
+- role: Intern — Attack Simulation Group
+  company: Cyber Security Agency of Singapore
+  location: Singapore
+  period: Sep 2021 – Jun 2022
+  bullets:
+    - Developed a modular, extensible tool to automate development and generation of evasive shellcode loaders
+    - Developed a shellcode stager to dynamically stage payloads based on endpoint configuration
+    - Presented offensive research titled "Evasion Adventures" at Division Zero (Div0) exploring modern EDR evasion

@@ -1,0 +1,32 @@
+title: Ethan Seow
+description: Offensive Researcher | Red Team Operator | Open Source Contributor
+url: "https://CodeXTF2.github.io"
+baseurl: ""
+
+# Personal Info
+author:
+  name: Ethan Seow
+  email: ethanseowyh@gmail.com
+  location: Singapore
+  github: https://github.com/CodeXTF2
+  linkedin: https://www.linkedin.com/in/3th4n-530w/
+  blog: https://codex-7.gitbook.io
+  tagline: "Offensive Researcher · Red Team Operator · Open Source Contributor"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

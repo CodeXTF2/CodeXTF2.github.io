@@ -1,0 +1,31 @@
+- name: Offensive Security Certified Professional (OSCP)
+  year: 2025
+  issuer: Offensive Security
+
+- name: Certified Red Team Lead (CRTL)
+  year: 2025
+  issuer: Zero-Point Security
+
+- name: Web Application Penetration Tester (eWPT)
+  year: 2026
+  issuer: eLearnSecurity
+
+- name: Certified Azure Red Team Professional (CARTP)
+  year: 2023
+  issuer: Altered Security
+
+- name: Certified Red Team Operator (CRTO)
+  year: 2023
+  issuer: Zero-Point Security
+
+- name: Certified Professional Penetration Tester (eCPPT)
+  year: 2022
+  issuer: eLearnSecurity
+
+- name: HackTheBox ProLabs — Zephyr & RastaLabs
+  year: 2024
+  issuer: HackTheBox
+
+- name: Offensive Security Wireless Professional (OSWP)
+  year: 2018
+  issuer: Offensive Security
